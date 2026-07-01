@@ -69,39 +69,6 @@ Examples of supported operations include:
 
 ## 4. Processor Architecture
 
-The processor is built from the following main blocks:
-
-```text
-+----------------+
-| Program Counter|
-+----------------+
-        |
-        v
-+----------------+
-| Instruction Mem|
-+----------------+
-        |
-        v
-+----------------+
-|  Control Unit  |
-+----------------+
-        |
-        v
-+----------------+       +----------------+
-|  Register File | ----> |      ALU       |
-+----------------+       +----------------+
-        |                       |
-        v                       v
-+----------------+       +----------------+
-| Immediate Gen  |       | Load Store Unit|
-+----------------+       +----------------+
-                                |
-                                v
-                        +----------------+
-                        |  Data Memory   |
-                        +----------------+
-```
-
 The top-level module connects the datapath and control path together. It fetches instructions from instruction memory, decodes the instruction, reads operands from the register file, performs ALU operations, accesses memory when required, and writes the result back to the register file.
 
 ---
